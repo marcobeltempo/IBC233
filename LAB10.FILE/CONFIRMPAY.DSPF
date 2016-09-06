@@ -1,0 +1,33 @@
+000001160331     A          R RECORD1
+000002160406     A            DAYRATE   R        O  5 41REFFLD(SHIFTRATES/DAYRATE +
+000003160331     A                                      SENECAPAY/SHIFTRATES)
+000004160406     A                                      EDTCDE(4)
+000005160406     A            NIGHTRATE R        O  7 41REFFLD(SHIFTRATES/NIGHTRATE +
+000006160331     A                                      SENECAPAY/SHIFTRATES)
+000007160406     A                                      EDTCDE(4)
+000008160406     A            AFTNRATE  R        O  6 41REFFLD(SHIFTRATES/AFTNRATE +
+000009160331     A                                      SENECAPAY/SHIFTRATES)
+000010160406     A                                      EDTCDE(4)
+000011160406     A                                  5 21'Day Rate:'
+000012160406     A                                  6 21'Afternoon Rate:'
+000013160406     A                                  7 21'Night Rate:'
+000014160406     A                                  9  7'Totals:'
+000015160406     A                                  4  7'Rates:'
+000016160406     A                                 10 21'Regular Pay:'
+000017160406     A                                 11 21'Overtime Pay:'
+000018160406     A                                 12 21'Company Payout:'
+000019160406     A                                  1  6'DW233F02'
+000037160406     A                                  2  6'Marco Beltempo'
+000038160406     A                                  1 29'Payroll Program Completed'
+000039160406     A            FIELD           L  O  1 66DATFMT(*JOB)
+000040160406     A                                      DATSEP('/')
+000042160406     A            TOTOVTPAY      9  2O 11 39EDTCDE(N $)
+000043160406     A            TOTREGPAY      9  2  10 39EDTCDE(N $)
+000044160406     A            TOTEMPPAY      9  2  12 39EDTCDE(N $)
+000100      
+000101160406     A*%%RS+<record-sequences>
+000102160406     A*%%RS+ <sequence name="CONFIRMPY">
+000103160406     A*%%RS+  <device type="display" width="80" height="24" />
+000104160406     A*%%RS+  <record-write record-format="RECORD1" />
+000105160406     A*%%RS+ </sequence>
+000106160406     A*%%RS </record-sequences>

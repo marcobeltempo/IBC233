@@ -1,0 +1,36 @@
+000100160304      A         R RECORD1                   CA03(03 'Exit')
+000101160304     A                                  5 19'Test 1:'
+000102160304     A                                  2 22'Marks Calculator   '
+000103160304     A                                  6 19'Test 2:'
+000104160304     A                                  7 19'Test 3:'
+000105160304     A                                  8 19'Labs:'
+000106160304     A                                  9 19'Exam:'
+000107160304     A  90        TEST1          3  0B  5 28RANGE(0 100)
+000108160304     A                                      DSPATR(PC PR)
+000109160304     A            TEST2          3  0B  6 28RANGE(0 100)
+000110160304     A            TEST3          3  0B  7 28RANGE(0 100)
+000111160304     A            LABS           2  0B  8 29RANGE(0 30)
+000112160304     A            EXAMS          3  0B  9 28RANGE(0 100)
+000113160304     A                                  2  2'DW233F02'
+000114160304     A                                  3  2'SENM25'
+000117160304     A                                  3 67TIME
+000118160304     A  10                              5 38'This Test Mark Dropped'
+000119160304     A                                      TEXT('Drop1')
+000120160304     A  13                              9 38'Automatic F with Exam mark below 5-
+000121160304     A                                      0   '
+000122160304     A                                      COLOR(RED)
+000123160304     A                                      DSPATR(RI)
+000124160304     A  12                              7 38'This Test Mark Dropped'
+000125160304     A  11                              6 38'This Test Mark Dropped'
+000126160304     A            FIELD           L  B  2 66
+000127160304     A          R RECORD2                   OVERLAY
+000128160304     A                                      CA03(03 'Exit')
+000129160304     A                                 20  4'F3-Exit'
+000130160304     A                                 14 10'Tests:'
+000131160304     A                                 16 10'Final Mark:'
+000132160304     A                                 18 10'Final Grade:'
+000133160304     A            TESTOVRALL     3Y 0O 14 28EDTCDE(1)
+000134160304     A            NUMGRADE       3Y 0O 16 28EDTCDE(1)
+000135160304     A            LETGRADE       2A  O 18 29
+000136160304     A                                 12 10'Exam:'
+000137160304     A            EXAMGRADE      4N 0O 12 27EDTCDE(P)

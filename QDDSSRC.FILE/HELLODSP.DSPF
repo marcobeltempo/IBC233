@@ -1,0 +1,7 @@
+000001121030     A          R RECORD1
+000002121030     A                                  4 22'H e l l o    U n i v e r s e'
+000003121030     A            PLANET         8   O  7 39
+000004121030     A                                  7 18'Destination Planet:'
+000005121030     A  99                              9 18'Passenger Name:'
+000006121030     A  99        FULLNAME      31   O  9 39
+000100

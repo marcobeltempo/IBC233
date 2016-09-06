@@ -1,0 +1,44 @@
+000100160324 PGM    (&OUTPUT &SOLUTION &SHOWCMD)                                                                                                      
+000102160401      DCLF LAB8DSP                                                                                                                        
+000105160321      DCL &SHOWCMD   *CHAR 4                                                                                                              
+000106160321      DCL &SOLUTION  *CHAR 4                                                                                                              
+000107160321      DCL &OUTPUT    *CHAR 8                                                                                                              
+000109160331      DCL &OUTQ      *CHAR 10                                                                                                             
+000110160331      DCL &OUTQLIB   *CHAR 10                                                                                                             
+000111160331      DCL &SYSLVL    *CHAR 9                                                                                                              
+000126160305                                                                                                                                          
+000127160324             IF        (&SHOWCMD = '*YES') DSPCMD DSPSYSLVL                                                                               
+000128160324             RTVOBJD    QSYS/QCMD  *PGM  SYSLVL(&SYSLVL)                                                                                  
+000134160305             SELECT                                                                                                                       
+000135160324                WHEN    (&OUTPUT = '*MSGLINE') DO                                                                                         
+000136160314             SNDPGMMSG  MSG('System Level is'     *BCAT  +                                                                                
+000137160314                             &SYSLVL              *BCAT  +                                                                                
+000138160314                             'according to'       *BCAT  +                                                                                
+000139160331                             'Marco Beltempo''s New CLLE Command')  MSGTYPE(*COMP)                                                        
+000141160314              ENDDO                                                                                                                       
+000142160324              WHEN    (&OUTPUT = '*DISPLAY') DO                                                                                           
+000143160324                      CHGVAR   &SYSLVLV %SST(&SYSLVL 2 2)                                                                                 
+000144160324                      CHGVAR   &SYSLVLR %SST(&SYSLVL 5 2)                                                                                 
+000145160324                      CHGVAR   &SYSLVLM %SST(&SYSLVL 8 2)                                                                                 
+000146160324              SNDRCVF   RCDFMT(RECORD1)                                                                                                   
+000147160324              IF      &IN04 SNDRCVF RCDFMT(COMMANDBY)                                                                                     
+000148160324              ENDDO                                                                                                                       
+000150160324              WHEN    (&OUTPUT = '*PRINTER') DO                                                                                           
+000151160331                         RTVUSRPRF  OUTQ(&OUTQ) OUTQLIB(&OUTQLIB)                                                                         
+000152160331                         CLROUTQ  &OUTQLIB/&OUTQ                                                                                          
+000153160331                         OVRPRTF FILE(QPRTOBJD) SPLFNAME(&SYSLVL)                                                                         
+000155160331              DSPOBJD OBJ(QSYS/QCMD) OBJTYPE(*PGM) DETAIL(*FULL) OUTPUT(*PRINT)                                                           
+000157160331              WRKOUTQ &OUTQLIB/&OUTQ                                                                                                      
+000159160324              ENDDO                                                                                                                       
+000160160324              ENDSELECT                                                                                                                   
+000161160324              SELECT                                                                                                                      
+000162160324              WHEN     (&SOLUTION = '*YES') DO                                                                                            
+000163160324              SNDPGMMSG  MSG('I USED THE RTVOBJD COMMAND ' *BCAT +                                                                        
+000164160324                         'WITH THE SYSLVL PARAMETER') MSGTYPE(*COMP)                                                                      
+000165160324              ENDDO                                                                                                                       
+000166160324              ENDSELECT                                                                                                                   
+000168160324              ENDPGM                                                                                                                      
+000169160324                                                                                                                                          
+000170160324                                                                                                                                          
+000171160314                                                                                                                                          
+000172160305                                                                                                                                          

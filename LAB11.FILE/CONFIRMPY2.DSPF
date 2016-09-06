@@ -1,0 +1,34 @@
+000001160331     A          R RECORD1                                                                           
+000002160406     A            DAYRATE   R        O  5 41REFFLD(SHIFTRATES/DAYRATE +                             
+000003160331     A                                      SENECAPAY/SHIFTRATES)                                   
+000004160406     A                                      EDTCDE(4)                                               
+000005160406     A            NIGHTRATE R        O  7 41REFFLD(SHIFTRATES/NIGHTRATE +                           
+000006160331     A                                      SENECAPAY/SHIFTRATES)                                   
+000007160406     A                                      EDTCDE(4)                                               
+000008160406     A            AFTNRATE  R        O  6 41REFFLD(SHIFTRATES/AFTNRATE +                            
+000009160331     A                                      SENECAPAY/SHIFTRATES)                                   
+000010160406     A                                      EDTCDE(4)                                               
+000011160406     A                                  5 21'Day Rate:'                                             
+000012160406     A                                  6 21'Afternoon Rate:'                                       
+000013160406     A                                  7 21'Night Rate:'                                           
+000014160411     A                                 10  7'Totals:'                                               
+000015160406     A                                  4  7'Rates:'                                                
+000016160411     A                                 11 21'Regular Pay:'                                          
+000017160411     A                                 12 21'Overtime Pay:'                                         
+000018160411     A                                 13 21'Company Payout:'                                       
+000019160406     A                                  1  6'DW233F02'                                              
+000037160406     A                                  2  6'Marco Beltempo'                                        
+000038160406     A                                  1 29'Payroll Program Completed'                             
+000039160406     A            FIELD           L  O  1 66DATFMT(*JOB)                                            
+000040160406     A                                      DATSEP('/')                                             
+000042160411     A            TOTOVTPAY      9  2O 12 39EDTCDE(N $)                                             
+000043160411     A            TOTREGPAY      9  2  11 39EDTCDE(N $)                                             
+000044160411     A            TOTEMPPAY      9  2  13 39EDTCDE(N $)                                             
+000045160415     A            SHIFTTYPE     30   B  9 22                                                        
+000100                                                                                                          
+000101160411     A*%%RS+<record-sequences>                                                                      
+000102160411     A*%%RS+ <sequence name="CONFIRMPY">                                                            
+000103160411     A*%%RS+  <device type="display" width="80" height="24" />                                      
+000104160411     A*%%RS+  <record-write record-format="RECORD1" />                                              
+000105160411     A*%%RS+ </sequence>                                                                            
+000106160411     A*%%RS </record-sequences>                                                                     

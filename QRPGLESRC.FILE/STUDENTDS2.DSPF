@@ -1,0 +1,53 @@
+000100160307     A                                      DSPSIZ(24 80 *DS3)
+000200160324     A          R RECORD1                   CA03(03 'Exit')
+000300091027     A                                  4  2'Student Number:'
+000400091027     A                                  2 28'Student Information'
+000500091027     A                                  8  2'Birth Date:'
+000600091027     A                                  4 39'Phone:'
+000700091027     A                                 10  2'Address:'
+000800160324     A                                 20 32'F3 - Exit'
+001200091027     A                                  6  2'Name:'
+001201160324     A                                 16  1'Fees Owed:'
+001202160324     A                                 14  1'Fines Owed:'
+001203160324     A            STUDNO    R        O  4 21REFFLD(STUDENTR/STUDNO DW233F02/STU-
+001204160324     A                                      DENTS2)
+001205160324     A                                      EDTWRD('   -   -   ')
+001212160324     A            ADDRESS1  R        O 10 21REFFLD(STUDENTR/ADDRESS1 +
+001213160324     A                                      DW233F02/STUDENTS2)
+001218160324     A            BIRTHDATE R        O  8 21REFFLD(STUDENTR/BIRTHDATE +
+001219160324     A                                      DW233F02/STUDENTS2)
+001224160324     A            CITY      R        O 11 21REFFLD(STUDENTR/CITY DW233F02/STUDE-
+001225160324     A                                      NTS2)
+001226160324     A            PROVINCE  R        O 12 29REFFLD(STUDENTR/PROVINCE +
+001227160324     A                                      DW233F02/STUDENTS2)
+001228160324     A            POSTALCODER        O 12 21REFFLD(STUDENTR/POSTALCODE +
+001229160324     A                                      DW233F02/STUDENTS2)
+001230160324     A                                  2  2'DW233F02'
+001231160324     A            FIELD           L  O  2 67DATFMT(*JOB)
+001232160324     A                                      DATSEP('/')
+001233160324     A                                  7 50' '
+001234160324     A            FULLNAME      26   O  6 10
+001235160324     A            FEESOWED  R        O 16 21REFFLD(STUDENTR/FEESOWED +
+001236160324     A                                      DW233F02/STUDENTS2)
+001237160324     A  40                                  DSPATR(RI)
+001238160324     A                                      EDTCDE(P)
+001239160324     A            FINESOWED R        O 14 21REFFLD(STUDENTR/FINESOWED +
+001240160324     A                                      DW233F02/STUDENTS2)
+001241160324     A  41                                  DSPATR(RI)
+001242160324     A                                      EDTCDE(P)
+001243160324     A            PHONE     R        O  4 52REFFLD(STUDENTR/PHONE DW233F02/STUD-
+001244160324     A                                      ENTS2)
+001300091027     A          R RECORD2
+001400091027     A                                  5 16'Total Students: '
+001500091027     A                                  7 20'Fines Owed: '
+001600091027     A                                  8 21'Fees Owed: '
+001700091027     A            TOTALSTUD      5Y 0O  5 33EDTCDE(1)
+001800160324     A            TOTALFEES      7Y 2O  8 33EDTCDE(1)
+001900160324     A            TOTALFINES     7Y 2O  7 33EDTCDE(1)
+002000091027     A            TOTALOWING     7Y 2O 10 32EDTCDE(1 $)
+002100091027     A                                 10 19'Total Owing:'
+002200091027     A                                  2 27'Student Summary'
+002300091027     A                                  2 70DATE
+002400091027     A                                      EDTCDE(Y)
+002500091027     A                                  3 70TIME
+002600091027     A                                  2  2USER

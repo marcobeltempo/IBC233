@@ -1,0 +1,29 @@
+000100160211     A                                      DSPSIZ(24 80 *DS3)
+000200160208     A          R RECORD1                   CA03(03 'Exit')
+000201160208     A                                      CA21(21 'Command Line')
+000300140917     A                                  1 64DATE
+000400140917     A                                      EDTCDE(Y)
+000500140922     A                                  1 38'Lab 4'
+000600140917     A                                  2 64TIME
+000700140917     A                                  6  3'Please select one of the following-
+000800140917     A                                       options:'
+000900140922     A                                  7 14'1.  Currency Symbol Used by this S-
+001000140922     A                                      ystem'
+001100140917     A                                  8 14'2.  IPL type (Initial Program Load-
+001200140917     A                                       for System Reboot)'
+001300140917     A                                  9 14'3.  Signed on User''s Message Queu-
+001400140917     A                                      e'
+001500140922     A                                 10 14'4.  Initial number of active jobs -
+001600140922     A                                      for storage allocation'
+001700140922     A                                 11 14'5.  Display System Serial Number'
+001800160221     A                                 12 14'6.  Maximum Password Length'
+001900160221     A                                 15 17'Option:'
+002000140917     A                                 23  4'F3=Exit'
+002100140917     A                                 23 17'F21=Comand Line '
+002102160205     A                                  1  2'Marco Beltempo'
+002105160222     A            MSGTXT        70   O 20  3
+002108160307     A            OPTION         2   B 15 26
+002109160208     A  30                                  DSPATR(RI)
+002110160221     A  30                             15 45'Valid option must be entered'
+002111160221     A                                 13 14'7.  Previous sign on by signed on -
+002112160221     A                                      user'

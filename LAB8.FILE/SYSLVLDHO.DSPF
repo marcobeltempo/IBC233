@@ -1,0 +1,12 @@
+000100090817     A                                      DSPSIZ(24 80 *DS3)
+000200140707     A          R RECORD1
+000300140707     A                                  2  3USER
+000400090817     A                                  2 30'Display System Level'
+000500140707     A                                  2 70SYSNAME
+000600090817     A                                  4 28'Version:'
+000700090817     A            SYSLVLV        2   O  4 38
+000800090817     A                                  6 28'Release:'
+000900090817     A            SYSLVLR        2   O  6 38
+001000090817     A                                  8 23'Modification:'
+001100090817     A            SYSLVLM        2   O  8 38
+001200090817     A                                 11 21'F4 - Command Provided By'

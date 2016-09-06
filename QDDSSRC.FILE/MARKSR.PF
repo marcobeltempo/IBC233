@@ -1,0 +1,12 @@
+000100160307     A
+000101160307                R MARKSR
+000102160307                  STUDENTID      9P 0       COLHDG('STUDENT' 'ID')
+000103160307                                            EDTWRD('0   ,   ,   ')
+000104160307                  COURSE_CD      6          COLDHDG('COURSE' 'CODE')
+000105160307                  FINAL_MARK     3P 6       COLDHDG('FINAL' 'MARK')
+000106160307                  DATERUN         L         COLDHDG('DATE' 'RUN')
+000107160307
+000108160307
+000109160307
+000110160307
+000111160307

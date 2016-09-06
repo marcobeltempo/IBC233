@@ -1,0 +1,37 @@
+000001160204     A          R RECORD1                   CA03(03 'Exit')
+000013160204     A                                  5 19'Test 1:'
+000014160204     A                                  2 22'Marks Calculator   '
+000015160204     A                                  6 19'Test 2:'
+000016160204     A                                  7 19'Test 3:'
+000017160204     A                                  8 19'Labs:'
+000018160204     A                                  9 19'Exam:'
+000019160211     A  90        TEST1          3  0B  5 28RANGE(0 100)
+000020160211     A                                      DSPATR(PC PR)
+000021160204     A            TEST2          3  0B  6 28RANGE(0 100)
+000022160204     A            TEST3          3  0B  7 28RANGE(0 100)
+000023160204     A            LABS           2  0B  8 29RANGE(0 30)
+000024160204     A            EXAMS          3  0B  9 28RANGE(0 100)
+000030160204     A                                  2  2'DW233F02'
+000031160204     A                                  3  2'SENM25'
+000032160204     A                                  2 68DATE(*JOB *Y)
+000033160204     A                                      TEXT('MM/')
+000034160204     A                                  3 67TIME
+000035160204     A          R RECORD2                   OVERLAY
+000036160204     A                                      CA03(03 'Exit')
+000037160204     A                                 19  5'F3-Exit'
+000038160204     A                                 11 10'Tests:'
+000039160204     A                                 13 10'Final Mark:'
+000040160204     A                                 15 10'Final Grade:'
+000041160204     A            TESTOVRALL     3Y 0O 11 28EDTCDE(1)
+000042160204     A            NUMGRADE       3Y 0O 13 28EDTCDE(1)
+000043160204     A            LETGRADE       2A  O 15 29
+000044160128
+000100      
+000101160204     A*%%RS+<record-sequences>
+000102160204     A*%%RS+ <sequence name="Untitled">
+000103160204     A*%%RS+  <device type="display" width="80" height="24" />
+000104160204     A*%%RS+ </sequence>
+000105160204     A*%%RS+ <sequence name="Untitled1">
+000106160204     A*%%RS+  <device type="display" width="80" height="24" />
+000107160204     A*%%RS+ </sequence>
+000108160204     A*%%RS </record-sequences>

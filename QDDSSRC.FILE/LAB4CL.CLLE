@@ -1,0 +1,72 @@
+000100160222PGM                                                                                                 
+000105160208             DCLF LAB4DSPHO                                                                         
+000111160208             DCL &QCURSYM *CHAR 1                                                                   
+000112160310             DCL &QUSRSYS *CHAR 10                                                                  
+000113160221             DCL &OUTQLIB *CHAR 10                                                                  
+000114160221             DCL &QIPLTYPE *CHAR 1                                                                  
+000115160225             DCL &QACTJOB *DEC (5 0)                                                                
+000118160221             DCL &QSRLNBR *CHAR 8                                                                   
+000119160225             DCL &QPWDMAXLEN *DEC LEN(5 0)                                                          
+000120160221             DCL &PRVSIGN *CHAR 13                                                                  
+000121160222             SNDRCVF                                                                                
+000128160221             DOWHILE (&IN03 = '0')                                                                  
+000130160204                SELECT                                                                              
+000131160311                   WHEN   (&IN21 ='1' *AND &IN30 = '0' ) DO                                         
+000132160225                   CALL QUsCmdLN                                                                    
+000133160225                   ENDDO                                                                            
+000134160311                   WHEN (&OPTION = '1' *OR &OPTION = '01') CALLSUBR OPTION1                         
+000135160221                   WHEN (&OPTION = '2' *OR &OPTION = '02') DO                                       
+000136160311                                                                                                    
+000137160222                   RTVSYSVAL  SYSVAL(QIPLTYPE) RTNVAR(&QIPLTYPE)                                    
+000138160222                   CHGVAR &MsgTxt  ('The initial program load for system reboot is' *Bcat +         
+000139160222                          &QIPLTYPE *Bcat '= Operator panel IPL')                                   
+000140160311                   CHGVAR &IN30 '0'                                                                 
+000141160221                   ENDDO                                                                            
+000142160221                   WHEN (&OPTION = '3' *OR &OPTION = '03') DO                                       
+000143160310                        RTVJOBA OUTQ(&QUSRSYS) OUTQLIB(&OUTQLIB)                                    
+000144160310                        CHGVAR     &MsgTxt      ('Signed on users message queue is QUSRSYS/'      + 
+000145160310                                   *Bcat &QUSRSYS)                                                  
+000146160311                        CHGVAR &IN30 '0'                                                            
+000147160222                    ENDDO                                                                           
+000148160222                    WHEN (&OPTION = '4' *OR &OPTION = '04') DO                                      
+000149160225                    RTVSYSVAL SYSVAL(QACTJOB) RTNVAR(&QACTJOB)                                      
+000150160225                      CHGVAR &MsgTxt (&QACTJOB)                                                     
+000151160311                      CHGVAR &IN30 '0'                                                              
+000152160225                    /*CHGVAR &MsgTxt %BIN(&QACTJOB)        */                                       
+000153160225                   /*CHGVAR &MsgTxt (%SST(&QACTJOB 1 1))*/                                          
+000154160222                    ENDDO                                                                           
+000155160222                    WHEN (&OPTION = '5' *OR &OPTION = '05') DO                                      
+000156160222                    RTVSYSVAL SYSVAL(QSRLNBR) RTNVAR(&QSRLNBR)                                      
+000157160222                    CHGVAR  &MsgTxt ('The system serial number is' *Bcat &QSRLNBR)                  
+000158160311                    CHGVAR &IN30 '0'                                                                
+000159160222                    ENDDO                                                                           
+000160160221                    WHEN (&OPTION = '6' *OR &OPTION = '06') DO                                      
+000161160222                    RTVSYSVAL  SYSVAL(QPWDMAXLEN) RTNVAR(&QPWDMAXLEN)                               
+000162160222                    CHGVAR  &MsgTxt (&QPWDMAXLEN)                                                   
+000163160311                    CHGVAR &IN30 '0'                                                                
+000164160222                    ENDDO                                                                           
+000165160222                    WHEN (&OPTION = '7' *OR &OPTION = '07') DO                                      
+000166160222                         RTVUSRPRF  PRVSIGN(&PRVSIGN)                                               
+000167160222                         CHGVAR     &MsgTxt     ('Previous sign in' *BCat   +                       
+000168160222                        (%SST(&PRVSIGN 2 2) *Cat '/') *Cat (%SST(&PRVSIGN 4 2) *Cat '/') *Cat +     
+000169160222                        (%SST(&PRVSIGN 5 2) *Cat ' ') *Cat (%SST(&PRVSIGN 6 2) *Cat ':') *Cat +     
+000170160222                        (%SST(&PRVSIGN 7 2) *Cat ':') *Cat (%SST(&prvsign 8 2)))                    
+000171160311                         CHGVAR &IN30 '0'                                                           
+000172160222                    ENDDO                                                                           
+000179160311                      OTHERWISE CHGVAR &IN30 '1'                                                    
+000181160204                ENDSELECT                                                                           
+000182160204                SNDRCVF                                                                             
+000183160204             ENDDO                                                                                  
+000184160204             SUBR       OPTION1                                                                     
+000185160222                         RTVSYSVAL  SYSVAL(QCURSYM) RTNVAR(&QCURSYM)                                
+000186160222                         CHGVAR &MSGTXT ('The currency symbol is set to ' *CAT &QCURSYM )           
+000187160311                         CHGVAR &IN30 '0'                                                           
+000188160204             ENDSUBR                                                                                
+000189160222             ENDPGM                                                                                 
+000190160204                                                                                                    
+000191160204                                                                                                    
+000192160221                                                                                                    
+000193160221                                                                                                    
+000194160204                                                                                                    
+000195160204                                                                                                    
+000196160204                                                                                                    

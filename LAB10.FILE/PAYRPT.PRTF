@@ -1,0 +1,52 @@
+000001160401     A          R TITLE                                                                             
+000002160401     A                                  2  4DATE                                                    
+000003160401     A                                      EDTCDE(A)                                               
+000004160407     A                                  2 13TIME                                                    
+000005160407     A                                  2 95PAGNBR                                                  
+000007160401     A                                  2 48'Weekly Payroll Report'                                 
+000008160407     A                                  3  4'Name: Marco Beltempo'                                  
+000009160407     A                                  2 87'Page: '                                                
+000010160401     A          R COLHDG                                                                            
+000028160407     A                                     4'Employee'                                              
+000029160407     A                                      SPACEB(1)                                               
+000030160407     A                                    14'Work Shift'                                            
+000031160407     A                                    26'Pay Grade'                                             
+000032160407     A                                    42'Hourly Rate'                                           
+000033160407     A                                    57'Hours Worked'                                          
+000034160407     A                                    73'Regular Pay'                                           
+000035160407     A                                    87'Overtime Pay'                                          
+000036160407     A                                   104'Total Pay'                                             
+000037160401     A                                    41' '                                                     
+000038160407     A                                      SPACEB(2)                                               
+000039160407     A          R EMPDETAIL                                                                         
+000061160408     A            EMPNUM    R    9S 0      3REFFLD(ALLSHIFT/EMPNUM SENECAPAY/AL-                    
+000062160408     A                                      LSHIFT)                                                 
+000063160408     A                                      EDTWRD('   -   -   ')                                   
+000064160408     A                                      SPACEB(1)                                               
+000065160408     A            WORKSHIFT R    1A       19REFFLD(ALLSHIFT/WORKSHIFT +                             
+000066160408     A                                      SENECAPAY/ALLSHIFT)                                     
+000067160408     A            PAYGRADE  R    1A       29REFFLD(ALLSHIFT/PAYGRADE +                              
+000068160408     A                                      SENECAPAY/ALLSHIFT)                                     
+000069160408     A            HOURLYRATE     5  2     44EDTCDE(2)                                               
+000070160408     A            HRSWORKED R    3S 0     61REFFLD(ALLSHIFT/HRSWORKED +                             
+000071160408     A                                      SENECAPAY/ALLSHIFT)                                     
+000072160408     A                                      EDTCDE(2)                                               
+000073160408     A            REGULARPAY     7  2     73EDTCDE(2)                                               
+000074160408     A            OVERPAY        7  2     87EDTCDE(2)                                               
+000075160408     A            TOTALPAY       7  2    102EDTCDE(2)                                               
+000076160407     A          R TOTALS                    SPACEB(2)                                               
+000077160407     A                                    59'Totals:'                                               
+000078160408     A            TOTREGPAY      9  2     70EDTCDE(1 $)                                             
+000079160407     A            TOTOVTPAY      9  2     86EDTCDE(1 $)                                             
+000080160407     A            TOTEMPPAY      9  2    101                                                        
+000081160401     A                                      EDTCDE(1 $)                                             
+000100                                                                                                          
+000101160408     A*%%RS+<record-sequences>                                                                      
+000102160408     A*%%RS+ <sequence name="Report1">                                                              
+000103160408     A*%%RS+  <device type="printer" width="132" height="66" />                                     
+000104160408     A*%%RS+  <record-write record-format="TITLE" />                                                
+000105160408     A*%%RS+  <record-write record-format="COLHDG" />                                               
+000106160408     A*%%RS+  <record-write record-format="EMPDETAIL" />                                            
+000107160408     A*%%RS+  <record-write record-format="TOTALS" />                                               
+000108160408     A*%%RS+ </sequence>                                                                            
+000109160408     A*%%RS </record-sequences>                                                                     

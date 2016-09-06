@@ -1,0 +1,21 @@
+000100160303     A
+000101160303     A          R MARKSR
+000103160303     A            SUDENTID       9S 0   5 31COLHDG('STUDENT' 'ID')
+000104160303     A            COURSE_CD      6      7 31COLDHDG('COURSE' 'CODE')
+000105160303     A            FINAL_MARK     3S 0   9 31COLHDG('FINAL' 'MARK')
+000106160303     A            DATERUN         L     2 60COLDHDG('DATE' 'RUN')
+000112160303     A*%%RS+<record-sequences>
+000113160303     A*%%RS+ <sequence name="Untitled">
+000114160303     A*%%RS+  <device type="display" width="80" height="24" />
+000115160303     A*%%RS+ </sequence>
+000116160303     A*%%RS </record-sequences>
+000117160303     A*%%RS+<record-sequences>
+000118160303     A*%%RS+ <sequence name="Untitled">
+000119160303     A*%%RS+  <device type="display" width="80" height="24" />
+000120160303     A*%%RS+ </sequence>
+000121160303     A*%%RS </record-sequences>
+000122160303     A*%%RS+<record-sequences>
+000123160303     A*%%RS+ <sequence name="Untitled">
+000124160303     A*%%RS+  <device type="display" width="80" height="24" />
+000125160303     A*%%RS+ </sequence>
+000126160303     A*%%RS </record-sequences>

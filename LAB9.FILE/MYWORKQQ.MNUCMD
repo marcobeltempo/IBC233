@@ -1,0 +1,8 @@
+000001160401MYWORKQQ,1                                                                                          
+0000101604010001 CALL MARKSRPG                                                                                  
+0000111604010002 CALL LAB4CL                                                                                    
+0000121604010003 RUNQRY *n STDNTMARKS                                                                           
+0000131604010004 UPDDTA STUDENTS2                                                                               
+0000141604010005 DSPSYSLVLP OUTPUT(*MSGLINE)                                                                    
+0000151604010006 ?WRKOBJPDM LIB(DW233F02) OBJTYPE(*PGM)                                                         
+0000161604010007 WRKOBJPDM LIB(DW233F02) OBJATR('PF-SRC')                                                       

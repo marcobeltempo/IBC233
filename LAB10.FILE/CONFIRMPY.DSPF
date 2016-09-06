@@ -1,0 +1,14 @@
+000001160331     A          R RECORD1
+000002160331     A            DAYRATE   R        B  3 44REFFLD(SHIFTRATES/DAYRATE +
+000003160331     A                                      SENECAPAY/SHIFTRATES)
+000004160331     A            NIGHTRATE R        B  4 44REFFLD(SHIFTRATES/NIGHTRATE +
+000005160331     A                                      SENECAPAY/SHIFTRATES)
+000006160331     A            AFTNRATE  R        B  5 44REFFLD(SHIFTRATES/AFTNRATE +
+000007160331     A                                      SENECAPAY/SHIFTRATES)
+000100      
+000101160331     A*%%RS+<record-sequences>
+000102160331     A*%%RS+ <sequence name="CONFIRMPY">
+000103160331     A*%%RS+  <device type="display" width="80" height="24" />
+000104160331     A*%%RS+  <record-write record-format="RECORD1" />
+000105160331     A*%%RS+ </sequence>
+000106160331     A*%%RS </record-sequences>

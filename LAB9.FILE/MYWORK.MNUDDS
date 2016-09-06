@@ -1,0 +1,48 @@
+000001160401     A* Free Form Menu: MYWORK                                                                      
+000010160401     A*%%TS  SD  20160401  101341  DW233F02    REL-V7R2M0  5770-WDS                                 
+000020160401     A*%%EC                                                                                         
+000030160401     A                                      DSPSIZ(24 80 *DS3                  -                    
+000040160401     A                                             27 132 *DS4)                                     
+000050160401     A                                      CHGINPDFT                                               
+000060160401     A                                      INDARA                                                  
+000070160401     A                                      PRINT(*LIBL/QSYSPRT)                                    
+000080160401     A          R MYWORK                                                                            
+000090160401     A*%%TS  SD  20160401  020338  DW233F02    REL-V7R2M0  5770-WDS                                 
+000100160401     A                                      DSPMOD(*DS3)                                            
+000110160401     A                                      LOCK                                                    
+000120160401     A                                      SLNO(01)                                                
+000130160401     A                                      CLRL(*ALL)                                              
+000140160401     A                                      ALWROL                                                  
+000150160401     A                                      CF03                                                    
+000160160401     A                                      HELP                                                    
+000170160401     A                                      HOME                                                    
+000180160401     A                                      HLPRTN                                                  
+000190160401     A                                  1  2'MYWORK'                                                
+000200160401     A                                      COLOR(BLU)                                              
+000210160401     A                                  3  2'Selec one of the following: '                          
+000220160401     A                                      COLOR(BLU)                                              
+000230160401     A                                  5  7'1.'                                                    
+000240160401     A                                  6  7'2.'                                                    
+000250160401     A                                  7  7'3.'                                                    
+000260160401     A                                  8  7'4.'                                                    
+000270160401     A                                  9  7'5.'                                                    
+000280160401     A                                 10  7'6.'                                                    
+000290160401     A                                 11  7'7.'                                                    
+000300160401     A* CMDPROMPT  Do not delete this DDS spec.                                                     
+000310160401     A                                019  2'Selection or command              -                    
+000320160401     A                                          '                                                   
+000330160401     A                                  1 26'My'                                                    
+000340160401     A                                  1 29'Classrooms'                                            
+000350160401     A                                  1 40'Work'                                                  
+000360160401     A                                  1 45'in'                                                    
+000370160401     A                                  1 48'IBC233'                                                
+000380160401     A                                  1 63DATE                                                    
+000390160401     A                                      EDTCDE(Y)                                               
+000400160401     A                                  2 62TIME                                                    
+000410160401     A                                  5 10'ENTER MARKS'                                           
+000420160401     A                                  7 10'VIEW STUDENT MARKS'                                    
+000430160401     A                                  8 10'ADD/CHANGE/DELETE STUDENTS'                            
+000440160401     A                                  9 10'SHOW SYSTEM LEVEL'                                     
+000450160401     A                                 10 10'VIEW MY OBJECTS (DEFAULT DW233FO2)'                    
+000460160401     A                                 11 10'VIEW MY SOURCE FILES'                                  
+000470160401     A                                  6 10'INVESTIGATE SYSTEM'                                    
